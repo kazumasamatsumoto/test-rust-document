@@ -16,8 +16,7 @@ jobs:
       uses: ./.github/actions/build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/main' }}
       with:
-        deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
-        external_repository: kazumasamatsumoto/test-rust-document
-        PUBLISH_BRANCH: main
-        PUBLISH_DIR: ./book
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./book
