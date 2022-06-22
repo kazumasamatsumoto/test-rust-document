@@ -16,7 +16,7 @@ jobs:
       uses: ./.github/actions/build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      with:
+      env:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: [kazumasamatsumoto]/[test-doc-github-page]
         PUBLISH_BRANCH: main
