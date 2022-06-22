@@ -2,7 +2,7 @@ name: CI/CD
 on:
   push:
     branches:
-    - main
+    - master
     paths:
     - "src/**"
     - "book.toml"
@@ -19,5 +19,5 @@ jobs:
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: [kazumasamatsumoto]/[test-doc-github-page]
-        PUBLISH_BRANCH: main
+        PUBLISH_BRANCH: master
         PUBLISH_DIR: ./book
