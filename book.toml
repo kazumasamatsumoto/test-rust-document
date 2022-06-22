@@ -3,4 +3,4 @@ authors = ["kazumasamatsumoto"]
 language = "ja"
 multilingual = false
 src = "src"
-title = "test"
+title = "mdbookの使い方"
