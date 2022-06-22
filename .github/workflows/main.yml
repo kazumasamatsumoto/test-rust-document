@@ -1,11 +1,4 @@
 name: CI/CD
-on:
-  push:
-    branches:
-    - main
-    paths:
-    - "src/**"
-    - "book.toml"
 
 jobs:
   deploy:
